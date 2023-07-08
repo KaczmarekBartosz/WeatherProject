@@ -5,30 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WeatherApp by Bartosz Kaczmarek</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div>
-      <h1>WeatherApp by Bartosz Kaczmarek</h1>
+      <h1 class="title">WeatherApp by Bartosz Kaczmarek</h1>
     </div>
-
-    <div class="container">
-      <h2>Dane pogodowe</h2>
-      <div id="weather-data">
-        <script src="script.js"></script>
+    <div class="content">
+      <div class="container">
+        <h2>Dane pogodowe</h2>
+        <div id="weather-data">
+          <script src="script.js"></script>
+        </div>
       </div>
-    </div>
 
-    <div class="container">
-      <h2>Odczuwalna temperatura</h2>
+      <div class="container">
+        <h2>Odczuwalna temperatura</h2>
 
-      <div id="weather-data-feelslike">
-        <script src="script.js"></script>
+        <div id="weather-data-feelslike">
+          <script src="script.js"></script>
+        </div>
       </div>
+      <div class="container">
+        <h2>Siła wiatru</h2>
+        <div id="current-wind-speed"><script src="script.js"></script></div>
+      </div>
+      <div class="container"><h2>Content area 4</h2></div>
     </div>
-    <div class="container">
-      <h2>Siła wiatru</h2>
-      <div id="current-wind-speed"><script src="script.js"></script></div>
-    </div>
-    <div class="container"><h2>Content area 4</h2></div>
   </body>
 </html>
