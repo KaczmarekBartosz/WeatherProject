@@ -9,12 +9,15 @@ function getWeatherData() {
     .then(function (data) {
       var weatherDataElement = document.getElementById("weather-data");
       weatherDataElement.innerHTML =
-        "Aktualna temperatura: " + data.current.temp_c + "°C";
-    })
-    .then(function (data) {
-      var weatherDataElement = document.getElementById("weather-data");
-      weatherDataElement.innerHTML =
-        "Odczuwalna temperatura: " + data.current.feelslike_c + "°C";
+        "Aktualna temperatura wynosi " + data.current.temp_c + "°C" + ",";
+
+      if (data.current.temp_c >= 20) {
+        weatherDataElement.innerHTML +=
+          "<br>więc możesz założyć dziecku krótkie spodenki i koszulkę z krótkim rękawkiem.";
+      } else {
+        weatherDataElement.innerHTML +=
+          "<br>więc jest mniej niż 20 stopni. Powinieneś dziecku założyć bluzę z kapturem!";
+      }
     })
     .catch(function (error) {
       console.log("Wystąpił błąd:", error);
